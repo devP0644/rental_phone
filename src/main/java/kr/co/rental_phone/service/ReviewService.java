@@ -5,6 +5,9 @@ import kr.co.rental_phone.entity.network.Header;
 import kr.co.rental_phone.entity.network.request.ReviewApiRequest;
 import kr.co.rental_phone.entity.network.response.ReviewApiResponse;
 import kr.co.rental_phone.service.baseService.BaseService;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
 
 public class ReviewService extends BaseService<ReviewApiRequest, ReviewApiResponse, Review> {
     @Override
@@ -24,6 +27,11 @@ public class ReviewService extends BaseService<ReviewApiRequest, ReviewApiRespon
 
     @Override
     public Header<ReviewApiResponse> delete(Long id) {
+        return null;
+    }
+
+    @Override
+    public Header<List<ReviewApiResponse>> search(Pageable pageable) {
         return null;
     }
 }

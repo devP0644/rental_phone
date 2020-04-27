@@ -14,5 +14,6 @@ public interface CrudInterface<Req, Res> {
 
     Header<Res> delete(Long id);
 
-//    Header<List<Res>> search(Pageable pageable);
+    Header<List<Res>> search(Pageable pageable);
+
 }

@@ -5,6 +5,9 @@ import kr.co.rental_phone.entity.network.Header;
 import kr.co.rental_phone.entity.network.request.CallingPlanApiRequest;
 import kr.co.rental_phone.entity.network.response.CallingPlanApiResponse;
 import kr.co.rental_phone.service.baseService.BaseService;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
 
 public class CallingPlanService extends BaseService<CallingPlanApiRequest, CallingPlanApiResponse, CallingPlan> {
     @Override
@@ -24,6 +27,11 @@ public class CallingPlanService extends BaseService<CallingPlanApiRequest, Calli
 
     @Override
     public Header<CallingPlanApiResponse> delete(Long id) {
+        return null;
+    }
+
+    @Override
+    public Header<List<CallingPlanApiResponse>> search(Pageable pageable) {
         return null;
     }
 }
