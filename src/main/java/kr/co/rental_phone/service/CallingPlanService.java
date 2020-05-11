@@ -6,9 +6,11 @@ import kr.co.rental_phone.entity.network.request.CallingPlanApiRequest;
 import kr.co.rental_phone.entity.network.response.CallingPlanApiResponse;
 import kr.co.rental_phone.service.baseService.BaseService;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CallingPlanService extends BaseService<CallingPlanApiRequest, CallingPlanApiResponse, CallingPlan> {
     @Override
     public Header<CallingPlanApiResponse> create(Header<CallingPlanApiRequest> request) {

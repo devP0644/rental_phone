@@ -16,6 +16,13 @@ public class UserRepositoryTest extends RentalPhoneApplicationTests {
     UserRepository userRepository;
 
     @Test
+    public void idCheck() {
+        User user = userRepository.findById("test2");
+
+        assertNull(user);
+    }
+
+    @Test
     public void create() {
         User user = new User();
 

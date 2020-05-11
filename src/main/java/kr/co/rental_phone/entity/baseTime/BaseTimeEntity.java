@@ -20,4 +20,11 @@ public class BaseTimeEntity {
     @LastModifiedDate
     private LocalDateTime updated;
 
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    public void setUpdated(LocalDateTime updated) {
+        this.updated = updated;
+    }
 }

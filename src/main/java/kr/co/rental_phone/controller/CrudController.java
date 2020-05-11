@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Component
 public abstract class CrudController<req, res, Entity> implements CrudInterface<req, res> {
 
     @Autowired(required = false)
@@ -19,6 +21,7 @@ public abstract class CrudController<req, res, Entity> implements CrudInterface<
     @Override
     @PostMapping("")
     public Header<res> create(@RequestBody Header<req> request) {
+        System.out.println(baseService);
         return baseService.create(request);
     }
 

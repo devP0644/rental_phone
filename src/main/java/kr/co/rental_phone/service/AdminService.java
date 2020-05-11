@@ -6,9 +6,11 @@ import kr.co.rental_phone.entity.network.request.AdminApiRequest;
 import kr.co.rental_phone.entity.network.response.AdminApiResponse;
 import kr.co.rental_phone.service.baseService.BaseService;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AdminService extends BaseService<AdminApiRequest, AdminApiResponse, Admin> {
     @Override
     public Header<AdminApiResponse> create(Header<AdminApiRequest> request) {

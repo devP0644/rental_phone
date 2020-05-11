@@ -6,9 +6,11 @@ import kr.co.rental_phone.entity.network.request.QuestionApiRequest;
 import kr.co.rental_phone.entity.network.response.QuestionApiResponse;
 import kr.co.rental_phone.service.baseService.BaseService;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class QuestionService extends BaseService<QuestionApiRequest, QuestionApiResponse, Question> {
     @Override
     public Header<QuestionApiResponse> create(Header<QuestionApiRequest> request) {
